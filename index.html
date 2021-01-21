@@ -8,20 +8,37 @@
         <meta name="description" content="Routetour: harstud's other job">
     </head>
     
-    <body style="text-align:center;">
-        <br>
-        <img src="assets/logo.png" alt="Routetour">
+    <body style="text-align:center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0; padding: 0;">
+        <div style="background-color: rgb(248, 91, 75); filter: drop-shadow(0 0 30px);">
+            <img src="assets/logo.png" alt="Routetour" id="Routetour">
+        </div>
         <br><br>
         <h1>ABOUT ROUTETOUR</h1>
         <br>
         <h2>Routetour is a project by harstud: anything is made in Routetour.</h2>
         <h3>Note that this "anything" can literally be anything, music, animations, games, etc.</h3>
-        <p>our team is just harstud at the moment, but we're sure to expand soon</p>#
+        <p>our team is just harstud at the moment, but we're sure to expand soon</p>
         <br>
         <h2>LATEST ROUTETOUR VIDEO</h2>
         <br>
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_sUp0nTZI1Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <br><br>
-        <a href="https://discord.gg/SQ87DWBZ25">Discordz</a>
+        <a style="text-decoration: none; outline: none;" href="https://discord.gg/SQ87DWBZ25">Discordz</a>
+        <br><br><br>
+        <script>
+            const image = document.getElementById("Routetour")
+            let defaultw
+
+            window.onresize = function (){
+                if (window.innerWidth < 1280) {
+                    image.setAttribute("src", "assets/icon.png")
+                    defaultw = image.style.width
+                    image.style.width = "50%"
+                } else {
+                    image.setAttribute("src", "assets/logo.png")
+                    image.style.width = defaultw
+                }
+            }
+        </script>
     </body>
 </html>
