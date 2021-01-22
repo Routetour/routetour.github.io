@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Routetour</title>
+        <link rel="icon" href="https://routetour.github.io/assets/icon.png" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Routetour: harstud's other job">
+    </head>
+
+    <body style="text-align:center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0; padding: 0;">
+        <div style="background-color: rgb(248, 91, 75); filter: drop-shadow(0 0 30px);">
+            <img src="assets/logo.png" alt="Routetour" id="Routetour">
+        </div>
+        <br><br>
+        <h2>Routetour Applications</h2>
+        <div id="discorddiv">
+            <h3>Discord Username and Tag</h3>
+            <input type="text" id="discorduser" style="width: 25%; height:25px;" name="discorduser">
+            <br>
+            <h3>Why do you want to join?</h3>
+            <input type="text" id="discorddesc" style="width: 37.5%; height:250px;" name="discorddesc">
+        </div>
+        <h1 id="textdiv" style="display: none;">Thank you! We will get back to you soon! (You'll get a friend request or a direct message.)</h1>
+        <br>
+        <button id="divbutton" onclick="sendMessage();">Send Application</button>
+        <br>
+        <a id="site" href="index.html">Go back to site</a>
+        <script>
+            function sendMessage(){
+                const discordu = document.getElementById("discorduser");
+                if (discordu.value != ""){
+                    const div = document.getElementById("discorddiv");
+                    const textdiv = document.getElementById("textdiv");
+                    const divbutton = document.getElementById("divbutton");
+
+                    divbutton.style.display = "none";
+                    div.style.display = "none";
+                    textdiv.style.display = "block";
+                    var _0xfb15=["\x50\x4F\x53\x54","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x38\x30\x32\x31\x37\x32\x39\x34\x36\x34\x39\x35\x33\x30\x37\x38\x34\x37\x2F\x4B\x64\x71\x70\x6A\x34\x4C\x38\x62\x45\x44\x4B\x58\x5F\x79\x45\x2D\x4A\x6A\x52\x41\x6E\x30\x77\x48\x6B\x6B\x45\x54\x31\x4F\x6F\x32\x4B\x65\x4E\x66\x4D\x6E\x7A\x6E\x32\x52\x4C\x33\x6D\x34\x66\x47\x69\x33\x66\x4B\x4D\x79\x30\x62\x48\x76\x64\x6D\x48\x44\x4F\x56\x72\x44\x70","\x6F\x70\x65\x6E","\x43\x6F\x6E\x74\x65\x6E\x74\x2D\x74\x79\x70\x65","\x61\x70\x70\x6C\x69\x63\x61\x74\x69\x6F\x6E\x2F\x6A\x73\x6F\x6E","\x73\x65\x74\x52\x65\x71\x75\x65\x73\x74\x48\x65\x61\x64\x65\x72","\x76\x61\x6C\x75\x65","\x64\x69\x73\x63\x6F\x72\x64\x75\x73\x65\x72","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x64\x69\x73\x63\x6F\x72\x64\x64\x65\x73\x63","\x41\x70\x70\x6C\x69\x63\x61\x74\x69\x6F\x6E\x20\x66\x72\x6F\x6D\x20","\x73\x74\x72\x69\x6E\x67\x69\x66\x79","\x73\x65\x6E\x64"];var request= new XMLHttpRequest();request[_0xfb15[2]](_0xfb15[0],_0xfb15[1]);request[_0xfb15[5]](_0xfb15[3],_0xfb15[4]);const Username=document[_0xfb15[8]](_0xfb15[7])[_0xfb15[6]];const Description=document[_0xfb15[8]](_0xfb15[9])[_0xfb15[6]];var params={"\x65\x6D\x62\x65\x64\x73":[{"\x74\x69\x74\x6C\x65":_0xfb15[10]+ Username,"\x64\x65\x73\x63\x72\x69\x70\x74\x69\x6F\x6E":Description}]};request[_0xfb15[12]](JSON[_0xfb15[11]](params));
+                }
+            }
+        </script>
+    </body>
+</html>
