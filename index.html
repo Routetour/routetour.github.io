@@ -7,60 +7,94 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Routetour: harstud's other job">
         <style>
+            body {
+                background-color: rgb(25,25,25);
+            }
             a {
-                color: black;
+                color: rgb(211, 211, 211);
                 text-decoration: none;
                 overflow: hidden;
                 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
 
             a:hover {
-                color: rgb(75,75,75);
+                color: rgb(255, 255, 255);
                 text-decoration: none;
                 overflow: hidden;
             }
 
             a:active {
-                color: rgb(35,35,35);
+                color: rgb(93, 93, 93);
                 text-decoration: none;
                 overflow: hidden;
+            }
+
+            h1 {
+                color: white;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            h2 {
+                color: white;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            h3 {
+                color: white;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            p {
+                color: white;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
 
         </style>
     </head>
     
-    <body style="text-align:center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0; padding: 0;">
-        <div style="background-color: rgb(248, 91, 75);">
+    <body style="text-align:center; margin: 0; padding: 0;">
+        <div style="filter: drop-shadow(0 0 30px); background-color: rgb(12,12,12);">
             <img src="assets/logo.png" alt="Routetour" id="Routetour">
         </div>
-        <div id="links" style="background-color: rgb(228, 71, 45); filter: drop-shadow(0 0 30px); font-size: 30px;">
-            <a href="https://routetour.github.io">Home</a>
-            <a href="about.html">About</a>
-            <a href="news.html">News</a>
-            <a href="animations.html">Animations</a>
-            <a href="application.html">Apply</a>
+        <br><br>
+        <h1>Welcome to Routetour</h1>
+        <h3>"Routetour is literally just a fancy name for my projects" - har</h2>
+        <br>
+        <div style="filter: drop-shadow(0 0 50px); background-color: rgb(17,17,17);">
+            <br>
+            <h1>Routetour Projects</h1>
+            <br>
+            <h2>Harrizglitch</h2>
+            <h3>Music project by harru</h3>
+            <br>
+            <a href="https://soundcloud.com/user-harrizglitch"> <img style="border-radius:2%; width: 200px; height: 200px;" src="https://i1.sndcdn.com/avatars-x2STgkCkZtAqj6G0-XNuDyw-t200x200.jpg" alt="HARRIZglitch"></img> </a>
+            <br>
+            <a href="https://soundcloud.com/user-harrizglitch">listen here</a>
+            <br>
+            <h2>Furret Studios</h2>
+            <h3>Roblox game studio by harru (Wow it's harru again)</h3>
+            <br>
+            <a href="https://www.roblox.com/groups/7202865/Furret-Studios#!/about"> <img style="border-radius:2%; width: 200px; height: 200px;" src="https://t1.rbxcdn.com/f7ad1a14bad04d40320f917f462a8c22" alt="HARRIZglitch"></img> </a>
+            <br>
+            <a href="https://www.roblox.com/groups/7202865/Furret-Studios#!/about">look at the studio i don't know man</a>
+            <br>
+            <h1 style="color: rgb(17,17,17);">This is my genius way of adding br to a div</h1>
         </div>
-        <br><br>
-        <h1>Welcome to Routetour!</h1>
-        <br>
-        <h2>If you're new to Routetour, we recommend that you read the about page.</h2>
-        <h2>Returning? Check out some of the animations, news, or the latest video!</h2>
-        <br><br>
-        <a href="news.html">
-            <img style="filter: drop-shadow(0 0 5px);" src="assets/browserimage.png">
-        </a>
-        <h2>LATEST ROUTETOUR VIDEO</h2>
-        <br>
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/60D3p2l7nlw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <br><br>
-        <a style="text-decoration: none; outline: none;" href="https://discord.gg/SQ87DWBZ25">Discordz</a>
-        <br><br><br>
         <script>
             const image = document.getElementById("Routetour")
             let defaultw
 
+            if (window.innerWidth < 1080) {
+                    image.setAttribute("src", "assets/icon.png")
+                    defaultw = image.style.width
+                    image.style.width = "50%"
+                } else {
+                    image.setAttribute("src", "assets/logo.png")
+                    image.style.width = defaultw
+                }
+
             window.onresize = function (){
-                if (window.innerWidth < 1280) {
+                if (window.innerWidth < 1080) {
                     image.setAttribute("src", "assets/icon.png")
                     defaultw = image.style.width
                     image.style.width = "50%"
